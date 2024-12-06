@@ -1,0 +1,7 @@
+def login(username, password):
+    # Dummy user data for demonstration
+    dummy_user = {"username": "admin", "password": "12345"}
+    
+    if username == dummy_user["username"] and password == dummy_user["password"]:
+        return "Login successful!"
+    return "Invalid username or password."
