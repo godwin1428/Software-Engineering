@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Cheetah Airline</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <form action="thankYou.html">
+        <div class="mainContainer">
+            <h1>Flight booking form</h1>
+            <div class="trrb" >
+                <input type="radio" name="itineraryType" value="oneway" id="oneway">
+                <label>One way</label>
+                <input type="radio" name="itineraryType" value="return" id="return" checked="checked">
+                <label>Return</label>
+            </div>
+            <div class="topRow">
+                <div class="trd1">
+                    <label>From*</label><br/>
+                    <select id = "from" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="melbourne">Melbourne</option>                    
+                        <option value="sydney">Sydney</option>
+                        <option value="brisbane">Brisbane</option>
+                        <option value="darwin">Darwin</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                </div>
+                <div class="trd2">
+                <label>To*</label><br/>
+                    <select id = "to" required onchange='checkFromAndTo()'>
+                        <option value="" selected disabled>Select</option>
+                        <option value="melbourne">Melbourne</option>                    
+                        <option value="sydney">Sydney</option>
+                        <option value="brisbane">Brisbane</option>
+                        <option value="darwin">Darwin</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                </div>
+                <div class="trd3">
+                    <label>Depart*</label><br/>
+                    <input type="date" id="fromDate" min="2022-04-10" required>
+                </div>
+                <div class="trd4" id="type">
+                    <label id="returnLabel">Return*</label>
+                    
+                    <input type="date" id="returnDate" min="2022-04-10" required>
+                </div>
+                <div class="topRowErrorMessages">
+                    <div class="flightErrorMessage">From and to must be different and selected</div>
+                    <div class="dateErrorMessage">Please enter valid depart/return date/s.</div>
+                </div>
+                
+            </div>
+            <div class="secondRow">
+                <div class="srd1">
+                    <label>Passenger1</label><br/>
+                    <input type="text" id="firstNameP1" placeholder="First Name" onchange="checkName(document.getElementById('firstNameP1').value)"/>
+                    <input type="text" id="lastNameP1" placeholder="Last Name" onchange="checkName(document.getElementById('lastNameP1').value)"/>
+                </div>
+                <div class="srd2">
+                    <label>Gender</label><br/>
+                    <input type="radio" name="genderp1" value="male" id="male">Male
+                    <input type="radio" name="genderp1" value="female" id="female">Female
+                </div>
+                <div class="srd3">
+                    <label>Age</label><br/>
+                    <input type="number" id="p1Age" min="1" max="100" placeholder="Enter age (in years, max 100)"/>
+                </div>
+            </div>
+            <div class="p1NameErrorMsg">Must be 5 or more characters.</div>
+            <div class="p1GenderErrorMsg">Must be selected.</div>
+            <div class="p1AgeErrorMsg">Between 1 to 100 & in number only.</div>
+
+            <div class="thirdRow">
+                <div class="thirdd1">
+                    <label>Passenger2</label><br/>
+                    <input type="text" id="firstNameP2" placeholder="First Name" onchange="checkName(document.getElementById('firstNameP2').value)"/>
+                    <input type="text" id="lastNameP2" placeholder="Last Name" onchange="checkName(document.getElementById('lastNameP2').value)"/>
+                </div>
+                <div class="thirdd2">
+                    <label>Gender</label><br/>
+                    <input type="radio" name="genderp2" value="male" id="male">Male
+                    <input type="radio" name="genderp2" value="female" id="female">Female
+                </div>
+                <div class="srd3">
+                    <label>Age</label><br/>
+                    <input type="number" id="p2Age" min="1" max="100" placeholder="Enter age (in years, max 100)"/>
+                </div>
+            </div>
+            <div class="p2NameErrorMsg">Must be 5 or more characters.</div>
+            <div class="p2GenderErrorMsg">Must be selected.</div>
+            <div class="p2AgeErrorMsg">Between 1 to 100 & in number only.</div>
+            <div class="thirdRow">
+                <div class="thirdd1">
+                    <label>Passenger3</label><br/>
+                    <input type="text" id="firstNameP3" placeholder="First Name" onchange="checkName(document.getElementById('firstNameP3').value)"/>
+                    <input type="text" id="lastNameP3" placeholder="Last Name" onchange="checkName(document.getElementById('lastNameP3').value)"/>
+                </div>
+                <div class="thirdd2">
+                    <label>Gender</label><br/>
+                    <input type="radio" name="genderp3" value="male" id="male">Male
+                    <input type="radio" name="genderp3" value="female" id="female">Female
+                </div>
+                <div class="srd3">
+                    <label>Age</label><br/>
+                    <input type="number" id="p3Age" min="1" max="100" placeholder="Enter age (in years, max 100)"/>
+                </div>
+            </div>
+            <div class="p3NameErrorMsg">Must be 5 or more characters.</div>
+            <div class="p3GenderErrorMsg">Must be selected.</div>
+            <div class="p3AgeErrorMsg">Between 1 to 100 & in number only.</div>
+            <div class="contact">
+                <label>Contact Information</label><br/><br/>
+                <label>Email*</label><br/>
+                
+                <input type="text"  required /><br/>
+                <div class="mobile">
+                    <label>Mobile Number*</label><br/>
+                    <input type="number" id="mobile" placeholder="Enter your mobile (only in 10 digit format)" required/><br>
+                </div>
+                
+                <label>Address</label><br/>
+                <textarea id="story" name="story" rows="5" cols="48"  placeholder="Enter your address here"></textarea>
+            </div>
+            <div class="food">
+                <label>Preferred Food</label><br/>
+                    <select id = "preferredFood" >
+                        <option value="" selected>Select</option>
+                        <option value="Non Veg">Non Veg</option>                    
+                        <option value="Veg">Veg</option>
+                    </select>
+            </div>
+            <div class="payment">
+                <label>Payment*</label><br/>
+                    <select id = "from" required>
+                        <option value="" selected>Select</option>
+                        <option value="mastercard">mastercard</option>                    
+                        <option value="Visa">Visa</option>
+                    </select>
+            </div>
+            <button type="submit" >Submit</button>
+        </div>
+    </form>
+    
+    
+    
+</body>
+</html>

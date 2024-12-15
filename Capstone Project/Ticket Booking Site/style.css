@@ -1,0 +1,206 @@
+body{
+    margin:0;
+    padding:0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(wing.jpg);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+   
+}
+
+.mainContainer{
+    width:770px;
+    height:700px;
+    border: solid;
+    margin: auto;
+    margin-top:100px;
+    border-radius:30px;    
+    padding: 40px;
+    border-width: thin;
+}
+
+h1{
+    text-align: center;
+}
+.topRow{    
+    height: 50px;
+}
+
+.trd2{
+    margin-left: 170px;
+    margin-top: -40px;
+}
+
+.trd3{
+    margin-left: 350px;
+    margin-top: -40px;
+}
+
+.trd4{
+    margin-left: 550px;
+    margin-top: -40px;
+    height: 50px;
+    width:100px;
+   
+}
+#returnLabel{
+    
+}
+#returnDate{
+   
+}
+.topRowErrorMessages{
+    display:grid;
+    grid-template-columns: 350px 1fr;    
+    height:20px;
+}
+.flightErrorMessage{
+    display: none;
+    color:red;
+    border: solid;
+    
+}
+
+.dateErrorMessage{    
+    display: none;
+    color:red;
+}
+.trrb{
+    margin-left: 350px;
+    margin-top:  10px; 
+   
+}
+#return{
+    margin-left:120px;
+}
+
+.secondRow{
+    
+    height: 50px;
+    margin-top: 50px;
+}
+.srd1 input{
+    width: 150px;
+}
+
+#lastNameP1{
+    margin-left:10px;
+}
+
+.srd2{
+    margin-left: 350px;
+    margin-top: -40px;
+}
+.srd3{
+    margin-left: 550px;
+    margin-top: -40px;    
+}
+
+.srd3 input{
+    width: 190px;
+}
+
+.thirdd1 input{
+    width: 150px;
+}
+
+#lastNameP2{
+    margin-left:10px;
+}
+
+.p1NameErrorMsg{
+    display: none;
+    color:red
+}
+
+.p1GenderErrorMsg{
+    margin-left: 360px;
+    margin-top:  -20px; 
+    display: none;
+    color:red
+}
+
+.p1AgeErrorMsg{
+    color:red;
+    margin-left: 550px;    
+    margin-top: -20px; 
+    display: none;
+}
+
+.thirdRow{    
+    height: 50px;
+    margin-top: 50px;
+}
+
+.thirdd2{
+    margin-left: 350px;
+    margin-top: -40px;
+}
+#lastNameP3{
+    margin-left:10px;
+}
+
+.p2NameErrorMsg{
+    display: none;
+    color:red
+}
+
+.p2GenderErrorMsg{
+    margin-left: 360px;
+    margin-top:  -20px; 
+    display: none;
+    color:red
+}
+
+.p2AgeErrorMsg{
+    color:red;
+    margin-left: 550px;    
+    margin-top: -20px; 
+    display: none;
+}
+
+.p3NameErrorMsg{
+    display: none;
+    color:red
+}
+
+.p3GenderErrorMsg{
+    margin-left: 360px;
+    margin-top:  -20px; 
+    display: none;
+    color:red
+}
+
+.p3AgeErrorMsg{
+    color:red;
+    margin-left: 550px;   
+    margin-top: -20px; 
+    display: none;
+}
+
+.contact{
+    margin-top: 50px;
+}
+
+.mobile{
+    margin-left: 250px;
+    margin-top: -40px;    
+    
+}
+#mobile{
+    width: 100px;
+}
+.food{
+    margin-left: 550px;
+    margin-top: -150px; 
+}
+.payment{
+    margin-left: 550px;
+    margin-top: 15px;
+}
+
+button{
+    margin-left: 550px;
+    margin-top: 25px;
+}
