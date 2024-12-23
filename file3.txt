@@ -1,1 +1,16 @@
-"This is a sample file" 
+FROM python:2.7-slim
+WORKDIR /app
+COPY first.py /app/
+CMD ["python","first.py"]
+
+rename Dockerfile.txt Dockerfile
+
+
+docker build -t python27-trial .
+docker run python27-trial
+docker login
+docker tag python27-trial npk62/python27-trial
+docker push npk62/python27-trial
+
+to verify
+docker ps
