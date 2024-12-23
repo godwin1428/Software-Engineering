@@ -1,1 +1,37 @@
-"This is a sample file" 
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+git init
+
+---GITHUB PUSH---
+mkdir sepractical
+cd sepractical
+echo "This is a sample file" > file.txt
+git init
+git status
+git branch -M main
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/godwin1428/Software-Engineering.git
+git push -u origin main
+
+---GITHUB PULL---
+cd demose
+git clone https://github.com/octocat/Hello-World.git 
+cd sepractical
+git pull origin main 
+
+---GITHUB MERGE BRANCHING---
+cd /path/to/your/repository 
+git checkout -b feature-login 
+
+. Add a login.py File with a Simple Login Function
+1.	Create a new file named login.py:
+nano login.py 
+2.	Implement a simple login function. 
+
+git add login.py 
+git commit -m "Add login function in login.py"
+git push origin feature-login 
+git checkout main 
+git pull origin main 
+
